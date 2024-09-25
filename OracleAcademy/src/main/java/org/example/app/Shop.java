@@ -61,11 +61,13 @@ public class Shop {
         pm.reviewProduct(106, Rating.ONE_STAR, "I don't get it");
         //pm.printProductReport(106);
 
-        Comparator<Product> ratingSorter = (p1, p2) ->
-                p2.getRating().ordinal()-p1.getRating().ordinal();
-        Comparator<Product> priceSorter = (p1, p2) ->
-                p2.getPrice().compareTo(p1.getPrice());
-        pm.printProducts(ratingSorter.thenComparing(priceSorter).reversed());
+        pm.getDiscounts().forEach(
+                (rating, discount) -> System.out.println(rating + "\t" + discount));
+
+        pm.printProducts(p -> p.getPrice().floatValue() < 2,
+                (p1,p2) -> p2.getRating().ordinal() - p1.getRating().ordinal());
+
+
     }
 
 
