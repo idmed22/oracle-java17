@@ -12,21 +12,24 @@ public class Shop {
     public static void main(String[] args) {
 
         ProductManager pm = new ProductManager("en-GB");
+        pm.parseProduct("D,101,Tea,1.99,0,2021-09-21");
+        //pm.parseProduct("D,101,Tea,1.99,0");
 
         pm.createProduct(101, "Tea", BigDecimal.valueOf(1.99),
                 Rating.NOT_RATED);
-        //pm.printProductReport(101);
+        pm.printProductReport(101);
 
-        pm.reviewProduct(101, Rating.FOUR_STAR,"Nice hot cup of tea");
-        pm.reviewProduct(101, Rating.TWO_STAR,"Rather weak tea");
+        pm.reviewProduct(101,Rating.FOUR_STAR,"Nice hot cup of tea");
+        pm.reviewProduct(101,Rating.TWO_STAR,"Rather weak tea");
         pm.reviewProduct(101, Rating.FOUR_STAR,"Fine tea");
         pm.reviewProduct(101, Rating.FOUR_STAR,"Good tea");
         pm.reviewProduct(101, Rating.FIVE_STAR,"Perfect tea");
         pm.reviewProduct(101, Rating.THREE_STAR,"Just Add some lemon");
-        pm.reviewProduct(101, Rating.FOUR_STAR,"Nice hot cup of tea");
-        //pm.printProductReport(101);
-        //pm.changeLocale("es-US");
+        pm.printProductReport(101);
+        pm.parseProduct("F,103,Cake,3.99,0,2021-09-21");
 
+        //pm.changeLocale("es-US");
+        /*
         pm.createProduct(102, "Coffee", BigDecimal.valueOf(1.99),
                 Rating.NOT_RATED);
         pm.reviewProduct(102, Rating.THREE_STAR, "Coffee was ok");
@@ -66,6 +69,8 @@ public class Shop {
 
         pm.printProducts(p -> p.getPrice().floatValue() < 2,
                 (p1,p2) -> p2.getRating().ordinal() - p1.getRating().ordinal());
+
+         */
 
 
     }
