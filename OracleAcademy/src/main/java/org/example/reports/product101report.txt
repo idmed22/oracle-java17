@@ -1,0 +1,8 @@
+Banana, Price: £1.20, Rating: ★★★☆☆, bestBefore: 31/12/2024
+
+Not reviewed
+★★☆	Nice hot cup of tea
+Review: ★★★★☆	Good tea
+Review: ★★★☆☆	Just add some lemon
+Review: ★★☆☆☆	Perfect tea
+Review: ★★☆☆☆	Rather weak tea

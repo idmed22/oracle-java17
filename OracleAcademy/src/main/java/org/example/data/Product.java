@@ -1,5 +1,6 @@
 package org.example.data;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Objects;
@@ -7,7 +8,7 @@ import java.util.Objects;
 import static java.math.RoundingMode.HALF_UP;
 
 
-public sealed class Product implements Rateable<Product> permits Drink, Food{
+public sealed class Product implements Rateable<Product>, Serializable permits Drink, Food{
     private int id;
     private String name;
     private BigDecimal price;

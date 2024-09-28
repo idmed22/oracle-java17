@@ -1,0 +1,6 @@
+kombucha, Price: £1.99, Rating: ★★★★☆, bestBefore: 28/09/2024
+
+Review: ★★★★★	Perfect
+Review: ★★★★☆	Fine Tea
+Review: ★★★★☆	This is not tea
+Review: ★☆☆☆☆	Looks like tea but is it?
